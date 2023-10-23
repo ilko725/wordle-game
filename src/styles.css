@@ -230,3 +230,11 @@ h1 {
     transform: translateY(0%);
   }
 }
+
+
+.button {
+  border: 1px solid rgb(11, 48, 9);
+  background-color: rgb(11, 48, 9);
+  padding: 5px 20px ;
+  border-radius: 5px;
+}
