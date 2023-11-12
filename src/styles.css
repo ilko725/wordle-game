@@ -161,6 +161,48 @@ h1 {
   outline-offset: 4px;
 }
 
+.screen-keyboard-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.screen-keyboard-wrapper ul {
+  list-style: none;
+  display: flex;
+  align-content: center;
+  columns: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  padding:0;
+}
+
+.screen-keyboard-wrapper ul li {
+  background-color: var(--color-gray-900);
+  text-align: center;
+  width: 40px;
+  border-radius: 4px;
+  padding: 10px 0;
+  font-weight: 600;
+  /* aspect-ratio: 1 / 1; */
+}
+.screen-keyboard-wrapper ul li.correct {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: white;
+}
+.screen-keyboard-wrapper ul li.incorrect {
+  background: var(--color-gray-300);
+  border-color: var(--color-gray-300);
+  color: white;
+}
+.screen-keyboard-wrapper ul li.misplaced {
+  background: var(--color-warning);
+  border-color: var(--color-warning);
+  color: white;
+}
+
 .banner {
   position: fixed;
   left: 0;
@@ -232,9 +274,12 @@ h1 {
 }
 
 
-.button {
-  border: 1px solid rgb(11, 48, 9);
-  background-color: rgb(11, 48, 9);
+.reset-button {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  color: rgb(30, 30, 30);
   padding: 5px 20px ;
   border-radius: 5px;
+  margin-top: 10px;
 }
+

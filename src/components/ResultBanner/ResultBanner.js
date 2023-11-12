@@ -1,6 +1,6 @@
 import React from "react";
 
-function ResultBanner({ gameResult, answer, guessNumber }) {
+function ResultBanner({ gameResult, answer, guessNumber, handleResetGame }) {
 
   return (
     <>
@@ -9,6 +9,7 @@ function ResultBanner({ gameResult, answer, guessNumber }) {
           <p>
             <strong>Congratulations!</strong> Got it in <strong>{guessNumber} guesses</strong>.
           </p>
+          <button className="reset-button" onClick={handleResetGame}>Play Again</button>
         </div>
       )} 
       {gameResult === 'lost' && (
@@ -16,6 +17,7 @@ function ResultBanner({ gameResult, answer, guessNumber }) {
           <p>
             Sorry, the correct answer is <strong>{answer}</strong>.
           </p>
+          <button className="reset-button" onClick={handleResetGame}>Play Again</button>
         </div>
       )}
     </>
